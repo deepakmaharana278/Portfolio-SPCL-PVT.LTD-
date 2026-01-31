@@ -11,6 +11,8 @@ nav {
   align-items: center;
   justify-content: space-around;
   padding: 17px;
+  position: sticky;
+  top: 0;
 }
 nav h2 {
   font-style: oblique;
@@ -70,6 +72,7 @@ nav h2 {
   height: 400px;
   width: 400px;
   border-radius: 50%;
+  animation: fadeUp 0.7s ease;
 }
 hr {
   margin: 0 5vw 0 5vw;
@@ -125,4 +128,281 @@ hr {
   font-size: 2vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: underline;
+}
+.project-name {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 3vw;
+}
+.project-name div{
+  margin-top: 2vh;
+  height: 200px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: #a8dde9;
+  box-shadow: 5px 5px 5px rgb(136, 135, 135);
+  padding: 3vw;
+  text-align: center;
+  animation: fadeUp 0.7s ease;
+}
+
+.project-name div:hover{
+   box-shadow: 5px 5px 5px rgb(46, 45, 45);
+}
+
+
+.project-name div h5{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #1d1f1f;
+}
+.project-name div p{
+  margin: 16px 0 16px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: small;
+  line-height: 20px;
+}
+.project-name div a{
+  text-decoration: none;
+  background-color: #70cfdd;
+  padding: 5px 6px;
+  border-radius: 12px;
+  border: 1px solid gray;
+  color: #1d1f1f;
+  font-size: small;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.project-name div a:hover{
+  background-color: #84d4e0;
+}
+
+.contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeUp 0.7s ease;
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #1f2937;
+}
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-card label {
+  font-size: 14px;
+  color: #374151;
+  margin-top: 12px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  background-color: #add4da;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.contact-card textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.contact-card button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #09637e;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact-card button:hover {
+ background-color: #42a1be;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer{
+  background-color: #088395;
+  padding: 2vw;
+  color: white;
+  text-align: center;
+}
+footer a{
+  font-size: 25px;
+  color: white;
+  margin-right: 20px;
+}
+footer a:hover{
+  color: #8bd7e3;
+}
+footer p{
+  margin-top: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width: 1024px) {
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 4vw;
+    text-align: center;
+  }
+
+  .left h4 {
+    font-size: 3vw;
+  }
+
+  .right img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .skill h4,
+  .project h4 {
+    font-size: 3vw;
+  }
+
+  .skill-item {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-name div {
+    width: 260px;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  nav h2 {
+    font-size: 20px;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-item a {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .left h4 {
+    font-size: 5vw;
+  }
+
+  .left p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .right img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .skill h4,
+  .project h4 {
+    font-size: 5vw;
+  }
+
+  .skill p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .skill-item h4 {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .skill button {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .project-name {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-name div {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .contact-card {
+    width: 90%;
+    padding: 25px;
+  }
+
+  footer a {
+    font-size: 22px;
+    margin-right: 15px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
 }
