@@ -4,13 +4,14 @@
 }
 body {
   background-color: #cee0e4;
+  width: 100%;
 }
 nav {
+  height: 60px;
   background-color: #088395;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 17px;
   position: sticky;
   top: 0;
 }
@@ -20,12 +21,21 @@ nav h2 {
   font-family: sans-serif;
 }
 
+.nav-item {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 2vw;
+}
+
 .nav-item a {
   text-decoration: none;
-  margin-left: 15px;
   color: #ebf4f6;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+}
+.nav i {
+  font-size: 1.26vw;
+  display: none;
 }
 .nav-item a:hover {
   color: #92a3a7;
@@ -35,12 +45,16 @@ nav h2 {
   height: calc(100% - 100px);
   width: 100%;
   display: flex;
+  padding: 5vw 0;
 }
 
 .left {
   height: 100%;
   width: 45%;
-  padding: 5vw 4vw;
+}
+
+.full-body-content {
+  padding: 0 4vw;
 }
 
 .left h4 {
@@ -63,7 +77,6 @@ nav h2 {
 .right {
   height: 100%;
   width: 55%;
-  padding: 5vw 4vw;
   display: flex;
   justify-content: center;
 }
@@ -75,7 +88,6 @@ nav h2 {
   animation: fadeUp 0.7s ease;
 }
 hr {
-  margin: 0 5vw 0 5vw;
   height: 2px;
   border-radius: 20px;
   background-color: #09637e;
@@ -90,11 +102,11 @@ hr {
   margin-top: 10px;
   text-align: center;
   font-size: 2vw;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: underline;
 }
 
-.skill p{
+.skill p {
   margin-top: 2px;
   text-align: center;
 }
@@ -126,7 +138,7 @@ hr {
   margin-top: 15px;
   text-align: center;
   font-size: 2vw;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: underline;
 }
 .project-name {
@@ -135,7 +147,7 @@ hr {
   flex-wrap: wrap;
   margin-bottom: 3vw;
 }
-.project-name div{
+.project-name div {
   margin-top: 2vh;
   height: 200px;
   width: 300px;
@@ -147,24 +159,34 @@ hr {
   animation: fadeUp 0.7s ease;
 }
 
-.project-name div:hover{
-   box-shadow: 5px 5px 5px rgb(46, 45, 45);
+.project-name div:hover {
+  box-shadow: 5px 5px 5px rgb(46, 45, 45);
 }
 
-
-.project-name div h5{
+.project-name div h5 {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #1d1f1f;
 }
-.project-name div p{
+.project-name div p {
   margin: 16px 0 16px 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   font-size: small;
   line-height: 20px;
 }
-.project-name div a{
+.project-name div a {
   text-decoration: none;
   background-color: #70cfdd;
   padding: 5px 6px;
@@ -172,11 +194,11 @@ hr {
   border: 1px solid gray;
   color: #1d1f1f;
   font-size: small;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
 }
 
-.project-name div a:hover{
+.project-name div a:hover {
   background-color: #84d4e0;
 }
 
@@ -250,7 +272,7 @@ hr {
 }
 
 .contact-card button:hover {
- background-color: #42a1be;
+  background-color: #42a1be;
 }
 
 @keyframes fadeUp {
@@ -264,31 +286,27 @@ hr {
   }
 }
 
-footer{
+footer {
   background-color: #088395;
   padding: 2vw;
   color: white;
   text-align: center;
 }
-footer a{
+footer a {
   font-size: 25px;
   color: white;
   margin-right: 20px;
 }
-footer a:hover{
+footer a:hover {
   color: #8bd7e3;
 }
-footer p{
+footer p {
   margin-top: 5px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
 @media (max-width: 1024px) {
-
   nav {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    padding: 10px 20px;
   }
 
   .about {
@@ -299,12 +317,11 @@ footer p{
   .left,
   .right {
     width: 100%;
-    padding: 4vw;
     text-align: center;
   }
 
   .left h4 {
-    font-size: 3vw;
+    font-size: 26px;
   }
 
   .right img {
@@ -314,7 +331,7 @@ footer p{
 
   .skill h4,
   .project h4 {
-    font-size: 3vw;
+    font-size: 28px;
   }
 
   .skill-item {
@@ -327,29 +344,48 @@ footer p{
     width: 260px;
     height: auto;
   }
-
 }
-
 @media (max-width: 768px) {
+  nav {
+    padding: 10px 16px;
+    justify-content: space-between;
+  }
 
   nav h2 {
     font-size: 20px;
   }
 
+  .nav i {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ebf4f6;
+  }
+
   .nav-item {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #088395;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-item.active {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
   }
 
   .nav-item a {
-    margin: 0;
-    font-size: 14px;
+    font-size: 16px;
   }
 
+
   .left h4 {
-    font-size: 5vw;
+    font-size: 24px;
   }
 
   .left p {
@@ -362,9 +398,10 @@ footer p{
     height: 220px;
   }
 
+
   .skill h4,
   .project h4 {
-    font-size: 5vw;
+    font-size: 24px;
   }
 
   .skill p {

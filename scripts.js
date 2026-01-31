@@ -36,3 +36,14 @@ form.addEventListener("submit", (e) => {
   msg.style.color = "green";
   form.reset();
 });
+
+const menuIcon = document.querySelector(".menu-icon");
+const navItem = document.querySelector(".nav-item");
+
+menuIcon.addEventListener("click", () => {
+  navItem.classList.toggle("active");
+});
+
+navItem.addEventListener("click", () => {
+  navItem.classList.remove("active");
+});
