@@ -1,6 +1,9 @@
 var typed = new Typed('#element', {
   strings: ['Python Developer', 'Fullstack Developer','Web Devloper','Coder'],
   typeSpeed: 50,
+  backSpeed: 40,
+  backDelay: 1000,
+  loop: true,
 });
 
 document.querySelectorAll("nav a").forEach(item => {
